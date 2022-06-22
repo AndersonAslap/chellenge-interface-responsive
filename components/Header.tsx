@@ -1,8 +1,14 @@
-import { Flex, Img } from "@chakra-ui/react";
+import { Flex, Img, Link, Tooltip } from "@chakra-ui/react";
 
 import logo from '../assets/Logo.svg';
 
-export function Header() {
+import { RiArrowLeftSLine } from "react-icons/ri";
+
+interface HeaderProps {
+    isShowBackLink?: boolean;
+}
+
+export function Header({ isShowBackLink = false }: HeaderProps) {
     return (
         <Flex
             as="header"
@@ -16,7 +22,9 @@ export function Header() {
             justifyContent="space-around"
         >
 
-            <Flex as="span" >{`<`}</Flex>
+            {isShowBackLink && <Tooltip label="Voltar para a página inicial"><Link href="/" mt="24px" fontSize="28" width="32px" height="32px"><RiArrowLeftSLine /></Link></Tooltip>}
+
+            {!isShowBackLink && <Flex as="span"></Flex>}
 
             <Img src={logo.src} />
 

@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
-import { Flex, Text } from "@chakra-ui/react";
+import { Flex, Text, Link, Tooltip } from "@chakra-ui/react";
+import NextLink from 'next/link';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -12,6 +13,9 @@ import "swiper/css/pagination";
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper";
 
 import europe from '../assets/europe.png';
+import { cursorTo } from "readline";
+
+import { RiEyeFill } from "react-icons/ri";
 
 
 
@@ -55,6 +59,21 @@ export function SlidesCarousel() {
                         >
                             O continente mais antigo.
                         </Text>
+
+                        <Tooltip label="Mais informações do continente">
+                            <Link
+                                mt="8px"
+                                fontWeight="700"
+                                fontSize="24px"
+                                lineHeight="36px"
+                                textAlign="center"
+                                color="#DADADA"
+                                href={`/continent`}
+                            >
+                                <RiEyeFill />
+                            </Link>
+                        </Tooltip>
+
                     </Flex>
                 </SwiperSlide>
 
@@ -86,6 +105,21 @@ export function SlidesCarousel() {
                         >
                             O continente mais antigo.
                         </Text>
+
+                        <Tooltip label="Mais informações do continente">
+                            <Link
+                                mt="8px"
+                                fontWeight="700"
+                                fontSize="24px"
+                                lineHeight="36px"
+                                textAlign="center"
+                                color="#DADADA"
+                                href={`/continent`}
+                            >
+                                <RiEyeFill />
+                            </Link>
+                        </Tooltip>
+
                     </Flex>
                 </SwiperSlide>
 
@@ -117,8 +151,24 @@ export function SlidesCarousel() {
                         >
                             O continente mais antigo.
                         </Text>
+
+                        <Tooltip label="Mais informações do continente">
+                            <Link
+                                mt="8px"
+                                fontWeight="700"
+                                fontSize="24px"
+                                lineHeight="36px"
+                                textAlign="center"
+                                color="#DADADA"
+                                href={`/continent`}
+                            >
+                                <RiEyeFill />
+                            </Link>
+                        </Tooltip>
+
                     </Flex>
                 </SwiperSlide>
+
             </Swiper>
         </>
     );

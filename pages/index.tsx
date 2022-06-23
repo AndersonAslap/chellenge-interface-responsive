@@ -38,6 +38,8 @@ export default function Home() {
         fontSize="36px"
         lineHeight="54px"
         textAlign="center"
+        fontStyle="normal"
+        fontFamily="Poppins"
         mb="52px"
         color="#47585B"
       >

@@ -38,6 +38,8 @@ export function Banner() {
                             top="180px"
                             fontWeight="500"
                             lineHeight="54px"
+                            fontStyle="normal"
+                            fontFamily="Poppins"
                         >
                             5 Continentes,<br />
                             infinitas possibilidades.
@@ -51,6 +53,8 @@ export function Banner() {
                             fontSize="20px"
                             fontWeight="400"
                             lineHeight="30px"
+                            fontStyle="normal"
+                            fontFamily="Poppins"
                         >
                             Chegou a hora de tirar do papel a viagem que você sempre sonhou.
                         </Text>

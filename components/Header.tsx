@@ -22,7 +22,7 @@ export function Header({ isShowBackLink = false }: HeaderProps) {
             justifyContent="space-around"
         >
 
-            {isShowBackLink && <Tooltip label="Voltar para a página inicial"><Link href="/" mt="24px" fontSize="28" width="32px" height="32px"><RiArrowLeftSLine /></Link></Tooltip>}
+            {isShowBackLink && <Tooltip label="Voltar para a página inicial"><Link href="/" fontSize="28" width="32px" height="32px"><RiArrowLeftSLine /></Link></Tooltip>}
 
             {!isShowBackLink && <Flex as="span"></Flex>}
 

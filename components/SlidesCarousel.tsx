@@ -40,7 +40,7 @@ export function SlidesCarousel() {
                         flexDirection="column"
                     >
                         <Text
-                            fontWeight="700"
+                            fontWeight="600"
                             fontSize="48px"
                             lineHeight="72px"
                             textAlign="center"
@@ -51,7 +51,7 @@ export function SlidesCarousel() {
 
                         <Text
                             mt="16px"
-                            fontWeight="700"
+                            fontWeight="600"
                             fontSize="24px"
                             lineHeight="36px"
                             textAlign="center"
@@ -63,7 +63,53 @@ export function SlidesCarousel() {
                         <Tooltip label="Mais informações do continente">
                             <Link
                                 mt="8px"
-                                fontWeight="700"
+                                fontWeight="500"
+                                fontSize="24px"
+                                lineHeight="36px"
+                                textAlign="center"
+                                color="#DADADA"
+                                href={`/continent/europe`}
+                            >
+                                <RiEyeFill />
+                            </Link>
+                        </Tooltip>
+
+                    </Flex>
+                </SwiperSlide>
+
+                <SwiperSlide>
+                    <Flex
+                        height="450px"
+                        backgroundImage={europe.src}
+                        alignItems="center"
+                        justifyContent="center"
+                        flexDirection="column"
+                    >
+                        <Text
+                            fontWeight="500"
+                            fontSize="48px"
+                            lineHeight="72px"
+                            textAlign="center"
+                            color="#F5F8FA"
+                        >
+                            Europa
+                        </Text>
+
+                        <Text
+                            mt="16px"
+                            fontWeight="500"
+                            fontSize="24px"
+                            lineHeight="36px"
+                            textAlign="center"
+                            color="#DADADA"
+                        >
+                            O continente mais antigo.
+                        </Text>
+
+                        <Tooltip label="Mais informações do continente">
+                            <Link
+                                mt="8px"
+                                fontWeight="500"
                                 fontSize="24px"
                                 lineHeight="36px"
                                 textAlign="center"
@@ -86,22 +132,26 @@ export function SlidesCarousel() {
                         flexDirection="column"
                     >
                         <Text
-                            fontWeight="700"
+                            fontWeight="500"
                             fontSize="48px"
                             lineHeight="72px"
                             textAlign="center"
                             color="#F5F8FA"
+                            fontStyle="normal"
+                            fontFamily="Poppins"
                         >
                             Europa
                         </Text>
 
                         <Text
                             mt="16px"
-                            fontWeight="700"
+                            fontWeight="500"
                             fontSize="24px"
                             lineHeight="36px"
                             textAlign="center"
                             color="#DADADA"
+                            fontStyle="normal"
+                            fontFamily="Poppins"
                         >
                             O continente mais antigo.
                         </Text>
@@ -109,53 +159,7 @@ export function SlidesCarousel() {
                         <Tooltip label="Mais informações do continente">
                             <Link
                                 mt="8px"
-                                fontWeight="700"
-                                fontSize="24px"
-                                lineHeight="36px"
-                                textAlign="center"
-                                color="#DADADA"
-                                href={`/continent`}
-                            >
-                                <RiEyeFill />
-                            </Link>
-                        </Tooltip>
-
-                    </Flex>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                    <Flex
-                        height="450px"
-                        backgroundImage={europe.src}
-                        alignItems="center"
-                        justifyContent="center"
-                        flexDirection="column"
-                    >
-                        <Text
-                            fontWeight="700"
-                            fontSize="48px"
-                            lineHeight="72px"
-                            textAlign="center"
-                            color="#F5F8FA"
-                        >
-                            Europa
-                        </Text>
-
-                        <Text
-                            mt="16px"
-                            fontWeight="700"
-                            fontSize="24px"
-                            lineHeight="36px"
-                            textAlign="center"
-                            color="#DADADA"
-                        >
-                            O continente mais antigo.
-                        </Text>
-
-                        <Tooltip label="Mais informações do continente">
-                            <Link
-                                mt="8px"
-                                fontWeight="700"
+                                fontWeight="500"
                                 fontSize="24px"
                                 lineHeight="36px"
                                 textAlign="center"

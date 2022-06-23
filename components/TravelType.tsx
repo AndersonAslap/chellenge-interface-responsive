@@ -23,6 +23,8 @@ export function TravelType({ source, description }: TravelTypeProps) {
                 lineHeight="36px"
                 textAlign="center"
                 color="#47585B"
+                fontStyle="normal"
+                fontFamily="Poppins"
             >
                 {description}
             </Text>

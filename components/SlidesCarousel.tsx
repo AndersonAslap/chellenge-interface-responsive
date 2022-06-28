@@ -33,7 +33,7 @@ export function SlidesCarousel() {
             >
                 <SwiperSlide>
                     <Flex
-                        height="450px"
+                        height={["250px", "450px"]}
                         backgroundImage={europe.src}
                         alignItems="center"
                         justifyContent="center"
@@ -77,16 +77,17 @@ export function SlidesCarousel() {
                     </Flex>
                 </SwiperSlide>
 
+
                 <SwiperSlide>
                     <Flex
-                        height="450px"
+                        height={["250px", "450px"]}
                         backgroundImage={europe.src}
                         alignItems="center"
                         justifyContent="center"
                         flexDirection="column"
                     >
                         <Text
-                            fontWeight="500"
+                            fontWeight="600"
                             fontSize="48px"
                             lineHeight="72px"
                             textAlign="center"
@@ -97,7 +98,7 @@ export function SlidesCarousel() {
 
                         <Text
                             mt="16px"
-                            fontWeight="500"
+                            fontWeight="600"
                             fontSize="24px"
                             lineHeight="36px"
                             textAlign="center"
@@ -114,7 +115,7 @@ export function SlidesCarousel() {
                                 lineHeight="36px"
                                 textAlign="center"
                                 color="#DADADA"
-                                href={`/continent`}
+                                href={`/continent/europe`}
                             >
                                 <RiEyeFill />
                             </Link>
@@ -123,55 +124,7 @@ export function SlidesCarousel() {
                     </Flex>
                 </SwiperSlide>
 
-                <SwiperSlide>
-                    <Flex
-                        height="450px"
-                        backgroundImage={europe.src}
-                        alignItems="center"
-                        justifyContent="center"
-                        flexDirection="column"
-                    >
-                        <Text
-                            fontWeight="500"
-                            fontSize="48px"
-                            lineHeight="72px"
-                            textAlign="center"
-                            color="#F5F8FA"
-                            fontStyle="normal"
-                            fontFamily="Poppins"
-                        >
-                            Europa
-                        </Text>
 
-                        <Text
-                            mt="16px"
-                            fontWeight="500"
-                            fontSize="24px"
-                            lineHeight="36px"
-                            textAlign="center"
-                            color="#DADADA"
-                            fontStyle="normal"
-                            fontFamily="Poppins"
-                        >
-                            O continente mais antigo.
-                        </Text>
-
-                        <Tooltip label="Mais informações do continente">
-                            <Link
-                                mt="8px"
-                                fontWeight="500"
-                                fontSize="24px"
-                                lineHeight="36px"
-                                textAlign="center"
-                                color="#DADADA"
-                                href={`/continent`}
-                            >
-                                <RiEyeFill />
-                            </Link>
-                        </Tooltip>
-
-                    </Flex>
-                </SwiperSlide>
 
             </Swiper>
         </>

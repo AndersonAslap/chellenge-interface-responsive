@@ -14,7 +14,7 @@ export function Header({ isShowBackLink = false }: HeaderProps) {
             as="header"
             width="100%"
             maxWidth={1440}
-            height="100"
+            height={["50px", "100px"]}
             marginX="auto"
             marginTop="4"
             paddingX="6"
@@ -26,7 +26,7 @@ export function Header({ isShowBackLink = false }: HeaderProps) {
 
             {!isShowBackLink && <Flex as="span"></Flex>}
 
-            <Img src={logo.src} />
+            <Img src={logo.src} w={["81px", "184.06px"]} h={["20px", "45.92px"]} />
 
             <Flex as="span"></Flex>
         </Flex>

@@ -16,10 +16,9 @@ export default function Home() {
 
       <Flex
         as="div"
-        width="1160px"
-        height="145px"
-        marginY="80.79px"
-        flexDirection="row"
+        width={["275px", "1160px"]}
+        height={["120px", "145px"]}
+        marginY={["36px", "80.79px"]}
         justifyContent="space-between"
       >
         {travelTypeList.map((travelType) => {
@@ -32,11 +31,11 @@ export default function Home() {
 
       <Text
         mt="52px"
-        width="839px"
-        h="101px"
+        width={["297px", "839px"]}
+        h={["54px", "101px"]}
         fontWeight="500"
-        fontSize="36px"
-        lineHeight="54px"
+        fontSize={["20px", "36px"]}
+        lineHeight={["30px", "54px"]}
         textAlign="center"
         fontStyle="normal"
         fontFamily="Poppins"
@@ -48,8 +47,8 @@ export default function Home() {
       </Text>
 
       <Flex
-        w="1240px"
-        height="450px"
+        w={["375px", "1240px"]}
+        height={["250px", "450px"]}
         mb="40px"
       >
         <SlidesCarousel />

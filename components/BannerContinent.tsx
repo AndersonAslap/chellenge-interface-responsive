@@ -1,5 +1,8 @@
 import { Flex } from "@chakra-ui/react";
 
+
+import europe from '../assets/continent/europe.png';
+
 interface BannerContinentProps {
     sourceImage: string;
     text: string;

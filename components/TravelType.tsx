@@ -1,4 +1,4 @@
-import { Flex, Img, Text } from "@chakra-ui/react";
+import { Flex, Img, Text, useBreakpointValue } from "@chakra-ui/react";
 
 
 interface TravelTypeProps {
@@ -7,20 +7,27 @@ interface TravelTypeProps {
 }
 
 export function TravelType({ source, description }: TravelTypeProps) {
+
+    const isWideVersion = useBreakpointValue({
+        base: false,
+        lg: true
+    });
+
     return (
         <Flex
-            w="158px"
-            height="145px"
             justifyContent="center"
             alignItems="center"
-            flexDirection="column"
+            flexDirection={["row", "column"]}
         >
-            <Img src={source} />
+
+            {isWideVersion
+                ? <Img src={source} />
+                : <Text>.</Text>
+            }
             <Text
-                mt="20px"
-                fontWeight="600"
-                fontSize="24px"
-                lineHeight="36px"
+                fontWeight={["500", "600"]}
+                fontSize={["18px", "24px"]}
+                lineHeight={["27px", "36px"]}
                 textAlign="center"
                 color="#47585B"
                 fontStyle="normal"

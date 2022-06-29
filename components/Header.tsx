@@ -1,8 +1,9 @@
-import { Flex, Img, Link, Tooltip } from "@chakra-ui/react";
+import { Flex, Img, Tooltip, Link as ChackraLink, Icon } from "@chakra-ui/react";
 
 import logo from '../assets/Logo.svg';
+import Link from "next/link";
 
-import { RiArrowLeftSLine } from "react-icons/ri";
+import { BsChevronLeft } from "react-icons/bs";
 
 interface HeaderProps {
     isShowBackLink?: boolean;
@@ -12,23 +13,29 @@ export function Header({ isShowBackLink = false }: HeaderProps) {
     return (
         <Flex
             as="header"
+            position="relative"
+            justify="center"
             width="100%"
-            maxWidth={1440}
-            height={["50px", "100px"]}
+            maxWidth={1240}
             marginX="auto"
-            marginTop="4"
-            paddingX="6"
-            alignItems="center"
-            justifyContent="space-around"
+            marginTop={["4", "7"]}
         >
 
-            {isShowBackLink && <Tooltip label="Voltar para a página inicial"><Link href="/" fontSize="28" width="32px" height="32px"><RiArrowLeftSLine /></Link></Tooltip>}
-
-            {!isShowBackLink && <Flex as="span"></Flex>}
+            {isShowBackLink &&
+                <Link href="/" passHref>
+                    <ChackraLink
+                        position="absolute"
+                        top="0"
+                        left={["4", "8"]}
+                    >
+                        <Icon as={BsChevronLeft} fontSize={["md", "3xl"]} title="Home" />
+                    </ChackraLink>
+                </Link>
+            }
 
             <Img src={logo.src} w={["81px", "184.06px"]} h={["20px", "45.92px"]} />
 
-            <Flex as="span"></Flex>
+
         </Flex>
     )
 }

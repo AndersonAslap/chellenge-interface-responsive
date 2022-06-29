@@ -1,4 +1,4 @@
-import { Flex, Divider, Text } from "@chakra-ui/react";
+import { Flex, Divider, Text, Wrap } from "@chakra-ui/react";
 import { Banner } from "../components/Banner";
 import { Header } from "../components/Header";
 import { SlidesCarousel } from "../components/SlidesCarousel";
@@ -19,10 +19,13 @@ export default function Home() {
         width={["275px", "1160px"]}
         height={["120px", "145px"]}
         marginY={["36px", "80.79px"]}
-        justifyContent="space-between"
+        justifyContent={["center", "space-between"]}
+        bg="pink"
       >
         {travelTypeList.map((travelType) => {
+
           return <TravelType key={travelType.description} description={travelType.description} source={travelType.source} />
+
         })}
 
       </Flex>
@@ -54,6 +57,6 @@ export default function Home() {
         <SlidesCarousel />
       </Flex>
 
-    </Flex>
+    </Flex >
   )
 }

@@ -33,7 +33,7 @@ export function Header({ isShowBackLink = false }: HeaderProps) {
                 </Link>
             }
 
-            <Img src={logo.src} w={["81px", "184.06px"]} h={["20px", "45.92px"]} />
+            <Img src={logo.src} w={["81px", "184px"]} h={["20px", "45.92px"]} />
 
 
         </Flex>

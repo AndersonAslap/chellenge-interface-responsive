@@ -1,62 +1,79 @@
-import { Flex, Divider, Text, Wrap } from "@chakra-ui/react";
-import { Banner } from "../components/Banner";
+import { Flex, Heading, Text, Box, Image, useBreakpointValue, Wrap, WrapItem } from '@chakra-ui/react';
+import { NextPage } from 'next';
 import { Header } from "../components/Header";
-import { SlidesCarousel } from "../components/SlidesCarousel";
-import { TravelType } from "../components/TravelType";
 
-import { travelTypeList } from '../utils/travel-type-list';
+const Home: NextPage = () => {
 
-export default function Home() {
+  const isWideVersion = useBreakpointValue({
+    base: false,
+    lg: true,
+  });
+
   return (
-    <Flex direction="column" minHeight="100vh" alignItems="center">
-
-      <Header />
-
-      <Banner />
-
+    <>
       <Flex
-        as="div"
-        width={["275px", "1160px"]}
-        height={["120px", "145px"]}
-        marginY={["36px", "80.79px"]}
-        justifyContent={["center", "space-between"]}
-        bg="pink"
+        as="main"
+        flexDir="column"
+        alignItems="center"
+        w="100%"
+        maxW={1440}
+        minW={375}
+        marginX="auto"
       >
-        {travelTypeList.map((travelType) => {
+        <Header />
 
-          return <TravelType key={travelType.description} description={travelType.description} source={travelType.source} />
+        <Flex
+          position="relative"
+          bgImg="url('./images/background.png')"
+          bgRepeat="no-repeat"
+          bgPosition="top"
+          bgSize="cover"
+          w="100%"
+          mt={["4", "7"]}
+        >
+          <Flex
+            justify="space-between"
+            alignItems="center"
+            position="relative"
+            mx="auto"
+            w="100%"
+            maxW={1240}
+            px={["4", "10"]}
+            py={["7", "20"]}
+          >
 
-        })}
+            <Flex
+              alignItems="left"
+              flexDir="column"
+              gap={["2", "5"]}
+            >
+              <Heading as="h2" fontSize={["xl", "4xl"]} fontWeight="500" color="white.50">
+                5 Continentes,<br /> infinitas possibilidades.
+              </Heading>
+              <Text fontSize={["sm", "xl"]} fontWeight="400" color="gray.100">
+                Chegou a hora de tirar do papel a viagem que você {!!isWideVersion && (<br />)} sempre sonhou.
+              </Text>
+            </Flex>
 
+            {isWideVersion && (
+              <Box position="absolute" right="30" bottom="-9">
+                <Image src="./images/airplane.svg" />
+              </Box>
+            )}
+
+          </Flex>
+        </Flex>
+
+        <Flex>
+          <Wrap>
+            <WrapItem>
+              hg
+            </WrapItem>
+          </Wrap>
+        </Flex>
       </Flex>
-
-      <Divider border="2px" borderColor="#47585B" w="90px" h="0px" />
-
-      <Text
-        mt="52px"
-        width={["297px", "839px"]}
-        h={["54px", "101px"]}
-        fontWeight="500"
-        fontSize={["20px", "36px"]}
-        lineHeight={["30px", "54px"]}
-        textAlign="center"
-        fontStyle="normal"
-        fontFamily="Poppins"
-        mb="52px"
-        color="#47585B"
-      >
-        Vamos nessa?<br />
-        Então escolha seu continente
-      </Text>
-
-      <Flex
-        w={["375px", "1240px"]}
-        height={["250px", "450px"]}
-        mb="40px"
-      >
-        <SlidesCarousel />
-      </Flex>
-
-    </Flex >
+    </>
   )
 }
+
+export default Home;

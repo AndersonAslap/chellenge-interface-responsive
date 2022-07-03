@@ -1,6 +1,7 @@
 import { Flex, Heading, Text, Box, Image, useBreakpointValue, Wrap, WrapItem } from '@chakra-ui/react';
 import { NextPage } from 'next';
 import { Header } from "../components/Header";
+import { TravelType } from '../components/TravelType';
 
 const Home: NextPage = () => {
 
@@ -64,10 +65,33 @@ const Home: NextPage = () => {
           </Flex>
         </Flex>
 
-        <Flex>
-          <Wrap>
+        <Flex
+          justify="center"
+          w="100%"
+          maxW={1240}
+          mt={["9", "20"]}
+          px={["4", "10"]}
+        >
+          <Wrap
+            w="100%"
+            justify={["center", "space-between"]}
+            spacingX={["20", "0"]}
+            spacingY={["7", "0"]}
+          >
             <WrapItem>
-              hg
+              <TravelType urlImage="./images/cocktail.svg" description="vida noturna" />
+            </WrapItem>
+            <WrapItem>
+              <TravelType urlImage="./images/surf.svg" description="praia" />
+            </WrapItem>
+            <WrapItem>
+              <TravelType urlImage="./images/building.svg" description="moderno" />
+            </WrapItem>
+            <WrapItem>
+              <TravelType urlImage="./images/museum.svg" description="clássico" />
+            </WrapItem>
+            <WrapItem>
+              <TravelType urlImage="./images/earth.svg" description="e mais..." />
             </WrapItem>
           </Wrap>
         </Flex>
